@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+        }
+
+        form {
+            background-color: white;
+            width: 350px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="myForm" onsubmit="submitForm(event)">
+
+        <h2>Student Registration Form</h2>
+
+        Name:
+        <input type="text" placeholder="Enter your name" required>
+
+        Age:
+        <input type="number" placeholder="Enter your age" required>
+
+        Email:
+        <input type="email" placeholder="Enter your email" required>
+
+        Password:
+        <input type="password" placeholder="Enter password" required>
+
+        Date of Birth:
+        <input type="date" required>
+
+        Gender:<br>
+        <input type="radio" name="gender" required> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other
+
+        <br><br>
+
+        Course:
+        <select required>
+            <option value="">Select Course</option>
+            <option>B.Tech</option>
+            <option>BCA</option>
+            <option>BBA</option>
+            <option>MCA</option>
+        </select>
+
+        Hobbies:<br>
+        <input type="checkbox"> Reading
+        <input type="checkbox"> Sports
+        <input type="checkbox"> Music
+
+        <br><br>
+
+        Phone Number:
+        <input type="tel" placeholder="Enter phone number">
+
+        Address:
+        <textarea placeholder="Enter your address"></textarea>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+
+    </form>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            alert("Form submitted successfully!");
+        }
+    </script>
+
+</body>
+</html>

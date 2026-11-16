@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+        }
+
+        form {
+            background-color: white;
+            width: 350px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+    <body>
+        <form id="myForm" onsubmit="submitForm(event)">
+            <label for ="name">Name :</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+            <label for ="age">Age :</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required><br><br>
+
+            <label for ="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <label for ="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+
+            <label for ="gender">Gender:</label>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">   
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="other">Other</label>
+            <input type="radio" id="other" name="gender" value="other"><br><br>
+
+            <label for ="hobbies">Hobbies:</label>
+            <input type="checkbox" id="hobbies" name="hobbies" placeholder="Enter your hobbies" required>
+            <label for="reading">Reading</label>
+            <input type="checkbox" id="reading" name="hobbies" value="reading">
+            <label for="sports">Sports</label>
+            <input type="checkbox" id="sports" name="hobbies" value="sports">
+            <label for="music">Music</label>        
+            <input type="checkbox" id="music" name="hobbies" value="music"><br><br>
+
+            <label for ="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="" ><h3>Select a course</h3></option>
+                <option value="btech">B.Tech</option>
+                <option value="bca">BCA</option>
+                <option value="bba">BBA</option>
+                <option value="mca">MCA</option>    
+            </select><br><br>
+
+            <label for ="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>   
+
+            <label for ="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter your address" required></textarea><br><br> 
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">  
+        </form>
+        <script>
+        function submitForm(event) {
+            event.preventDefault();
+            alert("Form submitted successfully!");
+        }
+    </script>
+    </body>
+</html>

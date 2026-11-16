@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+<h2 id="demo" 
+onmouseover="over()" 
+onmouseout="out()"> 
+Move Mouse Here 
+</h2> 
+<button onclick="clickMe()">Click Me</button> 
+<script> 
+function over() { 
+document.getElementById("demo").style.color = 
+"red"; 
+} 
+function out() { 
+document.getElementById("demo").style.color = 
+"blue"; 
+} 
+function clickMe() { 
+alert("Button Clicked!"); 
+} 
+</script> 
+</body> 
+</html>
